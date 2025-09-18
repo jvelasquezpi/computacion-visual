@@ -1,4 +1,4 @@
-# Nombre del Taller
+# Taller 0 - Transformaciones Básicas en Computación Visual
 
 ## Fecha
 `2025-09-17` – Fecha de entrega o realización
