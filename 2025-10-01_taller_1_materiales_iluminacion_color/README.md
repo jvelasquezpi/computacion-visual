@@ -53,7 +53,7 @@ El proceso se centró en la configuración progresiva de la escena, desde la imp
 
 ### Código relevante
 
-El núcleo técnico del proyecto fue el shader procedural para simular suciedad. Aunque se implementó en el editor visual, la lógica conceptual se basa en la combinación de ruido FBM con el color base del material:
+Este código implementa el movimiento de la cámara dentro de la escena, lo cual es fundamental porque permite al usuario explorar el entorno 3D desde diferentes perspectivas, mejorando la comprensión espacial y la interacción con los objetos renderizados.
 
 ```glsl
 var scaleSpeed = 0.0001; // Velocidad de alejamiento
