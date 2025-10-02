@@ -78,16 +78,24 @@ function update() {
 
 ## Imagen de la Animación
 
-Capturas de pantalla obligatorias de la escena.
+Capturas de pantalla de la escena.
 
-[Enlace a tu video en YouTube, Vimeo, etc.](URL_DE_TU_VIDEO)
+### Escena general
+<img src="https://github.com/user-attachments/assets/87e8a483-8ff7-47d7-8908-5d97d91aa05b" alt="camara_01_general" width="500"/>
+
+### Iluminación atardecer
+<img src="https://github.com/user-attachments/assets/e5859ec8-da6c-4890-a961-5224d3d429fe" alt="cielo_atardecer" width="400"/>
+
+### Iluminación amanecer
+<img src="https://github.com/user-attachments/assets/17968ab7-e4aa-4179-83da-eefe46f37f59" alt="cielo_dia" width="400"/>
+
+
 ---
 
 ## 🎬 Video de la Animación
 
 El siguiente video muestra la escena en movimiento, destacando la rotación de la cámara, la alternancia entre vistas y el efecto de los shaders y la iluminación dinámica.
-
-[Video ](URL_DE_TU_VIDEO)
+![1001 (1)](https://github.com/user-attachments/assets/313d48f7-f7b1-4a4a-a5c4-63dc261afa81)
 
 ---
 ## Modelos GLB Usados
