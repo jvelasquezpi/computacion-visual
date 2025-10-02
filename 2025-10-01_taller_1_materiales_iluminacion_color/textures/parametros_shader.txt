@@ -1,0 +1,78 @@
+DOCUMENTACIÓN DE PARÁMETROS - SHADER DE SUCIEDAD
+==================================================
+
+TÉCNICA UTILIZADA:
+- Ruido procedural simple (función noise basada en hash)
+- Aplicado sobre materiales originales del modelo GLB
+- Preserva texturas y colores base del modelo
+
+PARÁMETROS DEL SHADER:
+----------------------
+
+1. dirtScale: 10.0
+   - Descripción: Controla el tamaño de las manchas de suciedad
+   - Rango típico: 5.0 - 20.0
+   - Valor más bajo = manchas más grandes
+   - Valor más alto = manchas más pequeñas y detalladas
+
+2. dirtColor: RGB(0.5, 0.4, 0.3)
+   - Descripción: Color del barro/suciedad
+   - R: 0.5 (127/255) - Componente rojo
+   - G: 0.4 (102/255) - Componente verde
+   - B: 0.3 (76/255) - Componente azul
+   - Resultado: Marrón oscuro terroso
+
+3. dirtCoverage: 0.5
+   - Descripción: Umbral de cobertura de suciedad
+   - Rango: 0.0 - 1.0
+   - Valor bajo (0.1) = mucha suciedad visible
+   - Valor alto (0.9) = poca suciedad visible
+   - 0.5 = cobertura balanceada (50% aprox)
+
+4. dirtIntensity: 0.6
+   - Descripción: Opacidad/intensidad de la suciedad
+   - Rango: 0.0 - 1.0
+   - 0.0 = sin suciedad (transparente)
+   - 1.0 = suciedad totalmente opaca
+   - 0.6 = 60% de opacidad
+
+ILUMINACIÓN:
+------------
+
+5. lightDirection: vec3(0.5, 1.0, 0.8)
+   - Descripción: Vector de dirección de la luz principal
+   - Normalizado automáticamente
+   - Simula luz desde arriba y ligeramente frontal
+
+6. ambientLight: 0.4
+   - Descripción: Luz ambiental base
+   - Rango: 0.0 - 1.0
+   - 0.4 = 40% de iluminación mínima en todas las áreas
+   - Evita sombras completamente negras
+
+7. diffuse (calculado)
+   - Descripción: Iluminación difusa basada en el ángulo de la normal
+   - Mínimo: 0.2 (áreas en sombra nunca completamente oscuras)
+   - Máximo: 1.0 (áreas directamente iluminadas)
+
+FUNCIÓN DE RUIDO:
+-----------------
+noise(vec2 p)
+- Tipo: Hash pseudo-aleatorio
+- Entrada: Coordenadas UV escaladas por dirtScale
+- Salida: Valor entre 0.0 y 1.0
+- Fórmula: fract(sin(dot(p, vec2(12.9898, 78.233))) * 43758.5453)
+
+APLICACIÓN:
+-----------
+- Se aplica sobre materiales originales (color + textura del GLB)
+- La suciedad se mezcla usando la función step() y mix()
+- step(dirtCoverage, dirt) crea máscara binaria
+- mix() combina color base con color de suciedad según intensidad
+
+COMPATIBILIDAD:
+---------------
+- Precision: highp float (alta precisión)
+- Compatible con WebGL 1.0
+- Preserva UVs originales del modelo
+- Usa normales en coordenadas del mundo para iluminación consistente
