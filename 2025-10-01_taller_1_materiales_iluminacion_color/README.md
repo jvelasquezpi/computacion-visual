@@ -32,12 +32,13 @@ Aplicar y demostrar el conocimiento sobre materiales PBR (Physically Based Rende
 
 2025-10-01_taller_1_materiales_iluminacion_color/
 
+```
 ├── threejs/
 ├── glb_models/
 ├── textures/
 ├── renders/
 ├── README.md
-
+```
 ---
 
 ## Implementación
@@ -69,7 +70,7 @@ function update() {
     // Evitar que se haga demasiado pequeña
     if (this.scale.x < 0.5) {
         this.scale.set(0.5, 0.5, 0.5);
-	
+  
     }
 }
 ```
@@ -86,7 +87,7 @@ Capturas de pantalla obligatorias de la escena.
 
 El siguiente video muestra la escena en movimiento, destacando la rotación de la cámara, la alternancia entre vistas y el efecto de los shaders y la iluminación dinámica.
 
-[Enlace a tu video ](URL_DE_TU_VIDEO)
+[Video ](URL_DE_TU_VIDEO)
 
 ---
 ## Modelos GLB Usados
@@ -178,6 +179,7 @@ La paleta de colores fue seleccionada para crear un ambiente definido y asegurar
 "Como generar ruido FBM y simular suciedad en Three.js"
 "Justificación para usar cámara perspectiva vs ortográfica en renderizado 3D"
 "Calcular valores HSV a partir de un color RGB para un ciclo de día y noche"
+```
 ---
 
 ## Reflexión Final
