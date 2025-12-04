@@ -116,5 +116,6 @@ Este proyecto se distribuye como un archivo de escena `.json` y debe ser ejecuta
 
 A continuación se observa la ejecución de la animación, mostrando la rotación de cámara y los objetos texturizados:
 
-![Gift demostración de la animación ThreeJS](examen_final/threejs/gifs/conmutacion_camaras_threejs.gif)
+![conmutacion_camaras_threejs (1)](https://github.com/user-attachments/assets/e24bbed1-5286-4294-a890-43cca2d52dd4)
+
 
