@@ -8,6 +8,17 @@ Este módulo del examen final se enfoca en la implementación de técnicas funda
 * **Recurso:** Imagen de prueba `guacamaya_roja.jpg`
 
 ---
+## Instrucciones de Ejecución del Notebook
+
+Para reproducir los resultados de este experimento, sigue estos pasos en tu entorno local o en la nube (Google Colab).
+
+### 1. Instalación de Dependencias
+Asegúrate de tener instaladas las librerías de procesamiento de imágenes y visualización:
+
+```bash
+pip install opencv-python matplotlib numpy
+```
+---
 
 ## 1. Separación de Canales de Color (RGB)
 Se realizó la descomposición de la imagen original en sus tres componentes aditivos fundamentales.
@@ -104,4 +115,6 @@ Este proyecto se distribuye como un archivo de escena `.json` y debe ser ejecuta
 ## 🎞️ Demostración Visual
 
 A continuación se observa la ejecución de la animación, mostrando la rotación de cámara y los objetos texturizados:
+
+![Gift demostración de la animación ThreeJS](examen_final/threejs/gifs/conmutacion_camaras_threejs.gif)
 
