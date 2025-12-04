@@ -46,4 +46,62 @@ Estas operaciones se ejecutaron sobre la versión en **escala de grises** de la 
 
 A continuación se muestra la secuencia completa de transformaciones aplicadas a la imagen original:
 
-![Proceso de transformación de imagen](path/to/your/summary_gif.gif)
+![conmutacion_camaras](https://github.com/user-attachments/assets/6ad72b4c-e692-4605-ba74-be5efbfb8255)
+
+
+---
+
+# Punto 2: Escena Interactiva en Three.js
+
+Este punto del examen consiste en la creación de una escena 3D compuesta y animada utilizando el editor gráfico de **Three.js**. El proyecto integra primitivas geométricas texturizadas, un sistema de iluminación variable y scripts personalizados para controlar la cámara y el entorno.
+
+##  Contenido de la Escena
+
+La composición incluye los siguientes elementos fundamentales:
+
+### 1. Objetos Geométricos (Mesh)
+Se han dispuesto tres figuras primitivas con texturas aplicadas para demostrar el mapeado UV y materiales:
+* ** Cubo:** Elemento central con texturizado.
+* **Esfera:** Objeto con superficie curva texturizada.
+* **Cilindro:** Primitiva vertical con texturizado.
+
+### 2. Iluminación y Cámaras
+* **Luces:** Configuración de múltiples fuentes de luz para generar sombras y volumen en los objetos.
+* **Cámaras:** Uso de `OrthographicCamera` y perspectivas.
+* **Animación de Cámara:** Se incluye una lógica de movimiento que rota la escena y modifica el zoom progresivamente.
+
+---
+
+## ⚙️ Lógica y Scripts (Comportamiento)
+
+El proyecto no es estático; incluye scripts embebidos en el archivo JSON que controlan la animación en tiempo real:
+
+| Script | Funcionalidad |
+| :--- | :--- |
+| **MovementCamera** | Controla la transformación de la cámara. Realiza una **rotación** constante en el eje Y (`0.0008`) y un **alejamiento** progresivo (zoom out) reduciendo la escala hasta un límite de 0.5. |
+| **Skye / Background** | Modifica dinámicamente el color de fondo (interpolación de azules) para dar ambiente a la escena. |
+| **LightDayNight** | (Si aplica según configuración) Controla la intensidad o color de la luz para simular cambios ambientales. |
+
+---
+
+## 🚀 Instrucciones de Ejecución
+
+Este proyecto se distribuye como un archivo de escena `.json` y debe ser ejecutado en el entorno web de Three.js.
+
+### Pasos para visualizar:
+
+1.  **Descargar el archivo:** Asegúrate de tener el archivo `exame_final.json` en tu equipo.
+2.  **Abrir el Editor:** Ingresa a la web oficial del editor:
+    > 🔗 **[https://threejs.org/editor/](https://threejs.org/editor/)**
+3.  **Importar el Proyecto:**
+    * En el menú superior, ve a `File` > `Import`.
+    * Selecciona el archivo `exame_final.json`.
+4.  **Reproducir:**
+    * Una vez cargada la escena, pulsa el botón **Play** en la barra superior para iniciar los scripts de animación y movimiento de cámara.
+
+---
+
+## 🎞️ Demostración Visual
+
+A continuación se observa la ejecución de la animación, mostrando la rotación de cámara y los objetos texturizados:
+
